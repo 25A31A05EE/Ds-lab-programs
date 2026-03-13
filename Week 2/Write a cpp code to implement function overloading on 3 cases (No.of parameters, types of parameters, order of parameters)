@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+
+class Demo
+{
+public:
+    // 1. Different number of parameters
+    void show(int a)
+    {
+        cout << "One parameter: " << a << endl;
+    }
+
+    void show(int a, int b)
+    {
+        cout << "Two parameters: " << a << " " << b << endl;
+    }
+
+    // 2. Different types of parameters
+    void display(int a)
+    {
+        cout << "Integer value: " << a << endl;
+    }
+
+    void display(double a)
+    {
+        cout << "Double value: " << a << endl;
+    }
+
+    // 3. Different order of parameters
+    void print(int a, float b)
+    {
+        cout << "Order (int, float): " << a << " " << b << endl;
+    }
+
+    void print(float b, int a)
+    {
+        cout << "Order (float, int): " << b << " " << a << endl;
+    }
+};
+
+int main()
+{
+    Demo obj;
+
+    // Case 1: Number of parameters
+    obj.show(10);
+    obj.show(10, 20);
+
+    // Case 2: Type of parameters
+    obj.display(5);
+    obj.display(5.5);
+
+    // Case 3: Order of parameters
+    obj.print(5, 3.2f);
+    obj.print(3.2f, 5);
+
+    return 0;
+}
