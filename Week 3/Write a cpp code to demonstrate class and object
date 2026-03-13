@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+// Define a class
+class Student
+{
+public:
+    string name;
+    int roll;
+
+    void display()
+    {
+        cout << "Student Name: " << name << endl;
+        cout << "Roll Number: " << roll << endl;
+    }
+};
+
+int main()
+{
+    // Create an object of class Student
+    Student s1;
+
+    cout << "Enter student name: ";
+    cin >> s1.name;
+
+    cout << "Enter roll number: ";
+    cin >> s1.roll;
+
+    // Call member function
+    s1.display();
+
+    return 0;
+}
